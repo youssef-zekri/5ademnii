@@ -6,19 +6,56 @@ height: 100vh;
 
 background: linear-gradient(to bottom right , rgb(194, 50, 227) , rgb(156, 137, 240));
 @include Flex();
+&_Link{
+    font-family: 200;
+    font-size: 0.9rem;
+    &-register{
+        color: #f1c0ff;
+        font-weight: 400;
+    }
+}
 &_layout{
     padding: 1rem;
     width: 55rem;
     height: 90vh;
     background: #FFFF;
     border-radius: 16px;
-    @include Flex();
+    @include Flex(row , center , center);
+    gap: 4rem;
     @media screen and (max-width : 1000px) {
         width: 100%;
         margin: 0 5vw;
     }
+    &_input , &_submit{
+        width: 16rem;
+        height: 2.5rem;
+        border-radius: 22px;
+        border: none;
+        background: #8080801c;
+        padding-left: 1rem;
+    }
+    &_submit{
+        background: rgba(168, 15, 171, 0.568);
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            scale: 1.05;
+
+        }
+
+    }
+    &_error{
+        color: red;
+        position: absolute;
+        font-size: 0.8rem;
+    }
+    }
 }
-}
+
 .login100-pic{
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     &:hover{

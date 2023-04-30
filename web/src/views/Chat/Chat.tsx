@@ -1,6 +1,3 @@
-import React from "react";
-import Friends from "./components/Friends/Friends";
-import ChatArea from "./components/ChatArea/ChatArea";
 import Menu from "../../components/Menu/Menu";
 import Job from "./components/Job/Job";
 import SearchJob from "./components/SearchForJob/SearchJob";

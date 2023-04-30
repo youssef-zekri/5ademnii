@@ -9,8 +9,9 @@
     padding: 1rem;
     &__offers{
         width: 100%;
-        height: 100%;
+        height: 80vh;
         @include Flex(column);
         gap: 2rem;
+
     }
 }

@@ -1,0 +1,19 @@
+.Login{
+    &_template{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    }
+    &_title{
+        font-size: 1.6rem;
+        font-weight:700;
+    }
+}
+.login-logo{
+    @media screen and (max-width : 1000px) {
+        display: none;
+    }
+}

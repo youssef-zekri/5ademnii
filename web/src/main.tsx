@@ -106,9 +106,9 @@ const client = createClient({
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   // <React.StrictMode>
+  <Provider value={client}>
   <ReduxProvider store={store}>
-    <Provider value={client}>
       <App />
-    </Provider>
   </ReduxProvider>
+  </Provider>
 );

@@ -7,6 +7,7 @@ import instagrame from '../../../assets/images/insta.png'
 import gmail from '../../../assets/images/Gmail-PNG-Free-Image.png'
 import phone from '../../../assets/images/phone.png'
 import done from '../../../assets/images/done.png'
+import { Link, useNavigate } from 'react-router-dom'
 const MainContainer = styled.div`
   width: 100%;
   max-width: 600px;
@@ -32,7 +33,7 @@ const StepContainer = styled.div`
   :after {
     content: '';
     position: absolute;
-    background: #4a154b;
+    background: #aa59aa;
     height: 4px;
     width: ${({ width }) => width};
     top: 50%;
@@ -53,7 +54,7 @@ const StepStyle = styled.div`
   border-radius: 50%;
   background-color: #ffffff;
   border: 3px solid ${({ step }) =>
-      step === 'completed' ? '#4A154B' : '#F3E7F3'};
+      step === 'completed' ? '#aa59aa' : '#F3E7F3'};
   transition: 0.4s ease;
   display: flex;
   justify-content: center;
@@ -77,7 +78,7 @@ const StepsLabelContainer = styled.div`
 
 const StepLabel = styled.span`
   font-size: 19px;
-  color: #4a154b;
+  color: #aa59aa;
   @media (max-width: 600px) {
     font-size: 16px;
   }
@@ -93,7 +94,7 @@ const ButtonsContainer = styled.div`
 const ButtonStyle = styled.button`
   border-radius: 4px;
   border: 0;
-  background: #4a154b;
+  background: #aa59aa;
   color: #ffffff;
   cursor: pointer;
   padding: 8px;
@@ -111,7 +112,7 @@ const ButtonStyle = styled.button`
 const CheckMark = styled.div`
   font-size: 26px;
   font-weight: 600;
-  color: #4a154b;
+  color: #aa59aa;
   -ms-transform: scaleX(-1) rotate(-46deg); /* IE 9 */
   -webkit-transform: scaleX(-1) rotate(-46deg); /* Chrome, Safari, Opera */
   transform: scaleX(-1) rotate(-46deg);
@@ -119,19 +120,19 @@ const CheckMark = styled.div`
 
 const steps = [
   {
-    label: '1',
+    label: 'welcome',
     step: 1,
   },
   {
-    label: '2',
+    label: 'About',
     step: 2,
   },
   {
-    label: '3',
+    label: 'Contact',
     step: 3,
   },
   {
-    label: '4',
+    label: 'Done .',
     step: 4,
   },
 ]
@@ -157,7 +158,7 @@ const [toggleselect , settoggelc1]=useState(false)
   const totalSteps = steps.length
 
   const width = `${(100 / (totalSteps - 1)) * (activeStep - 1)}%`
-
+const navigate = useNavigate()
   return (
     <MainContainer>
       <StepContainer width={width}>
@@ -190,9 +191,9 @@ const [toggleselect , settoggelc1]=useState(false)
             <p className='Register-welcome'>About {toggleselect ? 'You' : 'Your Company'}</p>
             <div className='Register-info'>
             <TextField  size="small" id="outlined-basic" label='Name' variant="outlined" />
-            <p>Foundation Date :</p>
-            <input type='date'/>
-            <p>speciality :</p><MultiSelect
+            <p className='subtitels'>Foundation Date :</p>
+            <input type='date' className='Register-date'/>
+            <p className='subtitels'>speciality :</p><MultiSelect
         options={options}
         value={selected}
         onChange={setSelected}
@@ -214,6 +215,7 @@ const [toggleselect , settoggelc1]=useState(false)
             <div className='Register-done'>
             <p className='Register-welcome'>Well Done !</p>
               <img src={done} alt="done" className="done" />
+              <Link to='/login' className='Register-done--link'>let's Start</Link>
             </div>
         }
         </div>        
