@@ -1,0 +1,11 @@
+query Clients {
+  clients {
+    id
+    name
+    address
+    email
+    password
+    createdAt
+    updatedAt
+  }
+}

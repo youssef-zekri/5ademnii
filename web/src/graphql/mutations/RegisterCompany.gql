@@ -1,0 +1,11 @@
+mutation RegisterCompany($data: RegisterCompanyInput!) {
+  RegisterCompany(data: $data) {
+    id
+    name
+    address
+    email
+    password
+    createdAt
+    updatedAt
+  }
+}

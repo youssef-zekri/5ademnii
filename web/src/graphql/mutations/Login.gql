@@ -1,0 +1,30 @@
+mutation Login($data: LoginInput!) {
+  login(data: $data) {
+    client {
+      id
+      first
+      last
+      email
+      password
+      address
+      birthDate
+      createdAt
+      updatedAt
+      balance
+      status
+      open
+      validated
+      profileImageUrl
+    }
+    company {
+      id
+      name
+      address
+      email
+      password
+      createdAt
+      updatedAt
+    }
+    
+  }
+}

@@ -1,0 +1,11 @@
+query Company {
+  Company {
+    id
+    name
+    address
+    email
+    password
+    createdAt
+    updatedAt
+  }
+}

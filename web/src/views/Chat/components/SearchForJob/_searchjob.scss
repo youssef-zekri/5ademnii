@@ -1,0 +1,25 @@
+.SearchJob{
+    width: 50vw;
+    text-align: center;
+    height: 2.5rem;
+    background-color: #53a7d887;
+    border-radius: 0.5rem;
+    color: white;
+    @include Flex();
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    @media screen and (max-width : 1000px) {
+        width: 100%;
+    }
+    &:hover{
+        border: 2px solid  #53a7d887;
+        background-color: #ffffff87;
+        color:  #53a7d887;
+       
+    }
+    &-icon{
+        width: 1.5rem;
+        filter: brightness(0) invert(1);
+    }
+}

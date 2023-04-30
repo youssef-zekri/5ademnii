@@ -1,0 +1,18 @@
+query Client {
+  Client {
+    id
+    first
+    last
+    email
+    password
+    address
+    birthDate
+    createdAt
+    updatedAt
+    balance
+    status
+    open
+    validated
+    profileImageUrl
+  }
+}

@@ -1,0 +1,13 @@
+.Cordonates{
+    @include Flex(column,flex-start , flex-start);
+    height: fit-content;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.379);
+    gap: 1rem;
+    &_option{
+        @include Flex(row,space-between);
+        gap: 1rem;
+    }
+}

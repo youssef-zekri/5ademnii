@@ -1,0 +1,58 @@
+.Menu{
+    width: 100%;
+    height: 3rem;
+    border-bottom: 1px solid grey;
+    @include Flex( _ ,space-between , center);
+
+    &_labels{
+        @include Flex();
+        gap: 1rem;
+        @media screen and (max-width : 1000px) {
+            justify-content: space-between;
+        }
+    }
+    &_input{
+            border-radius: 8px;
+            width: 15rem;
+            border: none;
+            background: #9692d929;
+            height: 1.8rem;
+            padding-left: 0.5rem;
+            @media screen and (max-width : 1000px) {
+                display: none;
+            }
+    }
+    &_Options{
+        @include Flex() ;
+        gap: 1rem;
+        &-icon{
+            padding: 0.2rem;
+            border-radius: 50%;
+            border: 2px solid rgba(221, 170, 240, 0.297);
+        }
+    }
+    &_Notifications{
+        position: absolute;
+        top: 6.5rem;
+        right: 2rem;
+        width: 15rem;
+        height: 18rem;
+        box-shadow: 1px 2px 12px rgb(0 0 0 / 29%);
+        border-radius: 8px;
+        background: white;
+        z-index: 5;
+        animation: Smooth 0.4s ease-in-out;
+        &-title{
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+}
+@keyframes Smooth {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

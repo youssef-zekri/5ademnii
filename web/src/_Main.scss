@@ -1,0 +1,20 @@
+@import "./assets/styles/base";
+@import "./assets/styles/mixins";
+@import "./views/home/home";
+@import './views/Auth/Auth';
+@import "./views/Chat/Chat";
+@import "./views/Profile/Profile.scss";
+@import './Layouts/MainLayouts/layout';
+@import "./components/Popup";
+@import './components/Menu/Menu';
+@import './views/Qr';
+.App {
+  background: linear-gradient(to right , white ,rgba(238, 245, 252, 0.589));
+  width: 100%;
+  height: 100vh;
+  @include Flex();
+
+}
+.white-content {
+  background: #e4e4e4;
+}

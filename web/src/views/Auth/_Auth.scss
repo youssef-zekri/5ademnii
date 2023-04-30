@@ -1,0 +1,31 @@
+@use './login/login';
+@use './Register/Register.scss';
+.Auth{
+    width: 100%;
+height: 100vh;
+
+background: linear-gradient(to bottom right , rgb(194, 50, 227) , rgb(156, 137, 240));
+@include Flex();
+&_layout{
+    padding: 1rem;
+    width: 55rem;
+    height: 90vh;
+    background: #FFFF;
+    border-radius: 16px;
+    @include Flex();
+    @media screen and (max-width : 1000px) {
+        width: 100%;
+        margin: 0 5vw;
+    }
+}
+}
+.login100-pic{
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:hover{
+        scale: 1.1;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @media screen and (max-width : 1000px) {
+        display: none;
+    }
+}

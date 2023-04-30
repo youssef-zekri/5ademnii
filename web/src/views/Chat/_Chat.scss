@@ -1,0 +1,16 @@
+@import './components/Friends/Friends';
+@import './components/ChatArea/ChatArea';
+@import './components/Job/job';
+@import './components/SearchForJob/searchjob';
+.Chat{
+    @include Flex(column , flex-start , center);
+    width:100%;
+    height: 100%;
+    padding: 1rem;
+    &__offers{
+        width: 100%;
+        height: 100%;
+        @include Flex(column);
+        gap: 2rem;
+    }
+}

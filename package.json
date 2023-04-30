@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@coreui/coreui": "^4.2.6",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@mui/lab": "^5.0.0-alpha.128",
+    "@mui/material": "^5.12.2",
+    "@mui/x-date-pickers": "^6.3.0",
+    "bootstrap": "^5.2.3",
+    "formik": "^2.2.9",
+    "mdb-react-ui-kit": "^6.0.0",
+    "qrcode": "^1.5.3",
+    "qrcode.react": "^3.1.0",
+    "react-3d-cube-transition": "^1.0.5",
+    "react-animated-3d-card": "^1.0.2",
+    "react-customizable-progressbar": "^1.2.0",
+    "react-multi-select-component": "^4.3.4",
+    "react-qr-code": "^2.0.11",
+    "react-router-dom": "^6.11.0",
+    "react-select": "^5.7.2",
+    "react-step-progress-bar": "^1.0.3",
+    "react-toastify": "^9.1.2",
+    "reactjs-popup": "^2.0.5",
+    "recharts": "^2.5.0",
+    "yup": "^1.1.1"
+  }
+}

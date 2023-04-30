@@ -1,0 +1,18 @@
+mutation RegisterClient($data: RegisterClientInput!) {
+  RegisterClient(data: $data) {
+    id
+    first
+    last
+    email
+    password
+    address
+    birthDate
+    createdAt
+    updatedAt
+    balance
+    status
+    open
+    validated
+    profileImageUrl
+  }
+}

@@ -1,0 +1,60 @@
+@import "../NavLinks/NavLinks";
+.SideBar {
+  background: linear-gradient(to bottom, #955becb0, #6c6ff0);
+  width: 22rem;
+  height: 100%;
+  border-radius: 16px 0 0 16px;
+  @include Flex(column, flex-start, center);
+  padding-top: 3rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &__UserPhoto {
+    width: 5rem;
+    border: solid 3px #fff;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  &__UserName {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffff;
+    margin-bottom: 12vh;
+    letter-spacing: 0.1rem;
+  }
+  &__logo{
+    color: #fff;
+    position: absolute;
+    width: 1.5rem;
+    top: 1rem;
+    left: 1rem;
+    scale: 1.3;
+  }
+  &__Toggler {
+    color: rgb(255, 255, 255);
+    background: #af9ed7;
+    padding: 0.55rem;
+    border-radius: 50%;
+    border: 2px rgba(240, 234, 246, 0.765) solid;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    stroke-width: 4px;
+    z-index: 3;
+    right: 0;
+    top: 4rem;
+  }
+  &--active{
+    width: 5rem;
+    padding-top: 33vh;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+  }
+}
+#SideBar__Toggler{
+    transform: rotate(0);
+    transition: all 0.3s ease-in-out;
+    &--active{
+        transform: rotate(180deg);
+        transition: all 0.3s ease-in-out;
+    }
+}
