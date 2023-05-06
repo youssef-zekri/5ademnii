@@ -10,6 +10,7 @@ const Profile = React.lazy(() => import("../views/Profile/Profile"));
 const Qr = React.lazy(() => import("../views/Qr"));
 const Error = React.lazy(() => import("../views/Error/Error"));
 const Register = React.lazy(()=>import('../views/Auth/Register/Register'))
+const Cv = React.lazy(()=>import('../views/cv/Cv'))
 enum RoutePath {
     HOME = '/',
     Profile = '/Profile',
@@ -17,7 +18,8 @@ enum RoutePath {
     Qr = '/qr',
     Login = '/login',
     Register = '/Register',
-    Error  ='*'
+    Error  ='*',
+    Cv = '/profile/:groupeId'
   
 }
   
@@ -63,6 +65,12 @@ export const routes: Route[] = [
       path: RoutePath.Register,
       component: Register,
       layout : Auth,
+      exact: true,
+    },
+    {
+      path: RoutePath.Cv,
+      component: null,
+      layout : Cv,
       exact: true,
     },
     {

@@ -2,14 +2,15 @@
     @include Flex(column,flex-start , center);
     height: fit-content;
     border-radius: 8px;
-    padding: 1rem;
     transition: all 0.3s ease-in-out;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.379);
     &-avatar{
         position: relative;
-        width: 7rem;
+        width: 9rem;
+        height: 9rem;
         border-radius: 50%;
         margin-bottom: 1rem;
+        margin-top: 1rem;
         overflow: hidden;
         border: 4px solid rgb(164, 202, 224);
         &-img{
@@ -17,15 +18,20 @@
         }
         &-upload{
             position: absolute;
+            height: 100%;
+            width: 100%;
             bottom: 0;
-            left : 10%;
-            background-color: indigo;
-            color: white;
-            padding: 0.5rem;
-            font-family: sans-serif;
+           @include Flex();
+            background-color: transparent;
+            color: transparent;
+            padding: 0.5rem 1rem;
             border-radius: 0.3rem;
             cursor: pointer;
-            margin-top: 1rem;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background:linear-gradient(to right,#00e1ff46 , #9900ff57 ) ;
+                color: white;
+            }
         }
     }
     &-job,&-location{
@@ -33,5 +39,17 @@
         font-weight: 200;
         color : rgba(0, 0, 0, 0.598);
         text-transform: capitalize;
+        border: none;
+        text-align: center;
+        padding: 0.2rem 0;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+        &:hover , &:active{
+            border: 2px solid;
+            border-color:  rgb(164, 202, 224);
+        }
     }
+}
+#upload-file{
+    cursor: pointer;
 }

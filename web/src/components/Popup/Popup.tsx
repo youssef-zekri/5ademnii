@@ -27,6 +27,7 @@ return (
     <i className="fa-solid fa-x icon icon" onClick={()=>dispatch(hidePopUp())}></i>
     </div>
 <div className='PopUP_Element_content'>
+  
     <p className='PopUP_Element_content-title'>jobe Offer</p>
     <TextareaAutosize
       aria-label="description"

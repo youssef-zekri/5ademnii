@@ -5,10 +5,11 @@ export default function Cordonates() {
   const data = useSelector((state : any)=>state?.Info.data)
   return (
     <div className='Cordonates'>
-        <CordonatesOption text={'Name'} value={data.Name}/>
-        <CordonatesOption text={'Email'}value={data.email}/>
-        <CordonatesOption text={'Phone'} type={'tel'} value={data.tel}/>
-        <CordonatesOption text={'Address'} value={data.Address}/>
+        <CordonatesOption text={'Name'} icon={"fa-solid fa-user"}/>
+        <CordonatesOption text={'Email'} icon={"fa-regular fa-envelope"} type='email'/>
+        <CordonatesOption text={'Phone'} type={'tel'} icon={"fa-solid fa-phone-volume"}/>
+        <CordonatesOption text={'Address'}  icon={"fa-solid fa-location-dot"}/>
+        
     </div>
   )
 }

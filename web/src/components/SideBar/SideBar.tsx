@@ -10,7 +10,7 @@ export default function SideBar() {
     { icon: "fa-solid fa-qrcode", path: "/Qr", message: "Qr" },
     { icon: "fa-solid fa-arrow-right-from-bracket", path: "/login", message: "Log out" , name : 'logOut' },
   ];
-  const [sideBar, setSideBar] = useState(false);
+  const [sideBar, setSideBar] = useState(true);
   const [darkMode, setDarkMode] = React.useState(true);
   const dim : any = useWindowDimensions()
   console.log(dim)

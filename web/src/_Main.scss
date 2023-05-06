@@ -8,11 +8,13 @@
 @import "./components/Popup";
 @import './components/Menu/Menu';
 @import './views/Qr';
+@import './views/cv/Cv.scss';
 .App {
   background: linear-gradient(to right , white ,rgba(238, 245, 252, 0.589));
   width: 100%;
   height: 100vh;
   @include Flex();
+  overflow: auto;
 
 }
 .white-content {

@@ -5,9 +5,38 @@
     padding: 1rem;
     transition: all 0.3s ease-in-out;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.379);
-    gap: 1rem;
+    gap: 0.6rem;
     &_option{
         @include Flex(row,space-between);
         gap: 1rem;
     }
+}
+.input-icons i {
+        position: absolute;
+    top: 0;
+    z-index: 2;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+  
+.icons {
+    padding: 0.6rem;
+    min-width: 50px;
+    text-align: center;
+    opacity: 0.7;
+}
+  
+.input-field {
+    width: 100%;
+    height: 2.2rem;
+    padding: 10px;
+    padding-left: 45px;
+    text-align-last: left;
+    border-radius: 6px;
+    border: 1px solid rgb(176, 176, 176);
+    position: relative;
 }

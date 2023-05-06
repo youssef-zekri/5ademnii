@@ -1,0 +1,155 @@
+.Cv{
+    width: 50vw;
+    height: 110vh;
+    position: relative;
+    top: 3rem;
+    bottom: 3rem;
+    background: #ff060600;
+    border-radius: 12px;
+    box-shadow: 0px 0px 16px #00000069;
+    @include Flex(row , center ,center);
+    overflow: hidden;
+    animation: Cv 1.5s ease-in-out;
+    &_side{
+        background: black;
+        width: 18rem;
+        height: 110vh;
+        @include Flex(column , flex-start , center);
+        overflow: hidden;
+        &-photo{
+            width: 100%;
+            padding-right: 1rem;
+            filter:brightness(1.2);
+        }
+        &_content{
+            @include Flex(column , flex-start , center);
+            width: 100%;
+            padding-top: 1rem;
+            &-title{
+                color: white;
+                font-weight: 300;
+                text-align: left;
+                border-bottom: 2px solid #ffd900d2;
+                width: 100%;
+                margin-left : 3rem;
+                opacity: 0.9;
+                padding-bottom: 0.5rem;
+                padding-top: 1rem;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+            &-about{
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                margin: 0.5rem 0;
+                background-color: rgba(255, 255, 255, 0.205);
+                overflow: hidden;
+            }
+            &-text{
+                clip-path: polygon(0 0, 100% 0%, 86% 100%, 0% 100%);
+                color: rgb(0, 0, 0);
+                background:#ffbb00ee;
+                padding: 0.2rem 1.5rem 0.2rem 0.5rem;
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+            &-soutext{
+                color: white;
+                font-size: 0.9rem;
+            }
+            &-social{
+                width: 100%;
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                &-icons{
+                    color: #ffbb00ee;
+                    margin: 1rem;
+                }
+                &-discription{
+                    color: white;
+                    font-weight: 300;
+                }
+                }
+        }
+    }
+    &_content{
+        @include Flex(column , center , center);
+        position: relative;
+        width: 70%;
+        height: 100%;
+       &_resume{
+        padding: 1rem;
+        transform: translateY(5rem);
+            &-title{
+                font-size: 1.1rem;
+                font-weight: 700;
+                border-bottom: 2px solid #f1b203;
+                margin-bottom: 1rem; 
+            }
+            &-description{
+                margin-bottom: 2rem;
+                font-weight: 300;
+            }
+       }
+    }
+    &_header{
+        width: 100%;
+        background: #ffd900dd;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 5rem;
+        height: 8rem;
+        &-title{
+            font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.4rem;
+        }
+        &-subtitle{
+            font-size: 1rem;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 0.3rem;
+        }
+    }
+}
+.fa-github{
+    scale: 1.5;
+}
+.Color_Piker{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    border: 1px solid rgba(128, 128, 128, 0.536);
+    width: 15rem;
+    height: 5rem;
+    @include Flex(column , center , center);
+    padding: 1rem;
+    border-radius: 8px;
+    &-inputs{
+        @include Flex();
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    &-input{
+        overflow: hidden;
+        width: 2rem;
+        height: 2rem;
+        border: none;
+        border-radius: 12px;
+    }
+}
+@keyframes Cv{
+    from{
+        opacity : 0;
+        scale: 0.2;
+    }
+    to{
+        opacity : 1;
+        scale: 1;
+    }
+}
